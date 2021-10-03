@@ -15,7 +15,7 @@ const CastView = lazy(() =>
   import('../CastView/CastView' /*webpackChunkName: "cast"*/),
 );
 const ReviewsView = lazy(() =>
-  import('../ReviewsView' /*webpackChunkName: "Reviews"*/),
+  import('../ReviewsView/ReviewsView' /*webpackChunkName: "Reviews"*/),
 );
 const MovieDetailView = () => {
   const history = useHistory();

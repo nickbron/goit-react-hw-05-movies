@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useRouteMatch, useLocation } from 'react-router-dom';
-import { GetTrendingFilms } from '../Services/api';
+import { GetTrendingFilms } from '../../Services/api';
 
 const HomeView = () => {
   const location = useLocation();

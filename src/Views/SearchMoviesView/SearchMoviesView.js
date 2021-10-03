@@ -1,5 +1,5 @@
 import SearchForm from 'Componets/SearchForm/SearchForm';
-import { SearchFilmByName } from '../Services/api';
+import { SearchFilmByName } from '../../Services/api';
 import { useState, useEffect } from 'react';
 import { Link, useRouteMatch, useHistory, useLocation } from 'react-router-dom';
 

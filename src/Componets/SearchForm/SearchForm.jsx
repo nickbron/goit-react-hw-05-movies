@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 import {
   Header,
@@ -12,7 +13,7 @@ const SearchForm = ({ onSearch }) => {
   const handleSearch = e => {
     e.preventDefault();
     if (e.target.elements.filmName.value.trim() === '') {
-      console.log('sdsdsdsds');
+      toast.error('Для поиска введите значение');
       return;
     }
     onSearch(e.target.elements.filmName.value);
