@@ -7,6 +7,7 @@ import {
   useRouteMatch,
   useLocation,
   useHistory,
+  Switch,
 } from 'react-router-dom';
 import { GetFilmByID } from '../../Services/api';
 import { Button, Image } from './MovieDetailView.styled';
@@ -117,14 +118,15 @@ const MovieDetailView = () => {
             </li>
           </ul>
           <Suspense fallback={<h1>LOADING...</h1>}>
-            {/* <Route path="/movies/:movieId/cast"> */}
-            <Route path={`${path}/cast`}>
-              <CastView />
-            </Route>
-            {/* <Route path="/movies/:movieId/reviews"> */}
-            <Route path={`${path}/reviews`}>
-              <ReviewsView />
-            </Route>
+            <Switch>
+              <Route path={`${path}/cast`}>
+                <CastView />
+              </Route>
+
+              <Route path={`${path}/reviews`}>
+                <ReviewsView />
+              </Route>
+            </Switch>
           </Suspense>
           <hr />
         </>
